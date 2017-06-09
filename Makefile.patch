@@ -1,0 +1,13 @@
+*** Makefile.orig	2017-06-08 22:54:43.000000000 -0700
+--- Makefile	2017-06-08 22:54:54.000000000 -0700
+*************** install: ${TGT} 
+*** 28,35 ****
+  	if [ ! -d ${BINDIR} ]; then mkdir -p ${BINDIR};fi
+  	if [ ! -d ${CONFDIR} ]; then mkdir -p ${CONFDIR};fi
+  	cp ${TGT} ${BINDIR}/${TGT}
+- 	${BINDIR}/${TGT} -C -c /tmp/no-ip2.conf
+- 	mv /tmp/no-ip2.conf ${CONFDIR}/no-ip2.conf
+  
+  package: ${TGT}
+  	rm  -f *.bak
+--- 28,33 ----
